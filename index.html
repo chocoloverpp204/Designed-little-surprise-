@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070b1b">
+<title>For Dearest Koko Ahmed ♡</title>
+<style>
+:root{--bg:#070b1b;--ink:#f7f5ff;--muted:#b8c2e7;--ice:#bceaff;--lilac:#c9b8ff;--rose:#ffd0e8;--gold:#ffe8b2;--glass:#101a35b8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 8%,#1d3155 0,transparent 34%),radial-gradient(ellipse at 80% 90%,#251b4c 0,transparent 38%),#070b1b;color:var(--ink);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1}
+body:before{opacity:.55;background-image:radial-gradient(1px 1px at 9% 15%,#fff 99%,transparent),radial-gradient(2px 2px at 72% 11%,#cdeeff 99%,transparent),radial-gradient(1px 1px at 81% 54%,#fff 99%,transparent),radial-gradient(1px 1px at 31% 74%,#d5ccff 99%,transparent),radial-gradient(2px 2px at 47% 33%,#fff 99%,transparent);background-size:190px 220px,310px 280px,260px 240px,330px 290px,420px 380px}
+body:after{inset:auto -10vw -35vh;width:120vw;height:65vh;border-radius:50%;border:1px solid #9fcfff16;box-shadow:0 0 0 35px #9fcfff08,0 0 0 80px #9fcfff05}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+.screen{display:none;min-height:100svh;padding:clamp(22px,5vw,54px) 18px;align-items:center;justify-content:center;position:relative;isolation:isolate}
+.screen.active{display:flex;animation:screenIn .85s cubic-bezier(.2,.7,.2,1) both}
+.wrap{width:min(1040px,100%);margin:auto}
+.date-stamp{text-align:center;font:600 .76rem/1.5 system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#d8d0ff;margin:0 0 18px;text-shadow:0 0 18px #b7dfff35}
+.topline{display:flex;justify-content:space-between;gap:14px;align-items:center;font:600 .68rem/1.5 system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#b9c9eb}
+.brandmark{display:inline-flex;align-items:center;gap:9px}
+.brandmark i{width:7px;height:7px;background:var(--ice);border-radius:50%;box-shadow:0 0 12px var(--ice)}
+.stepcount{color:#7f91bf}
+h1,h2,h3,p{margin-top:0}
+h1{font-weight:normal;font-size:clamp(3rem,8vw,7rem);line-height:.96;letter-spacing:-.045em;margin:22px 0}
+h2{font-size:clamp(2rem,5vw,4rem);line-height:1.05;font-weight:normal;letter-spacing:-.035em}
+h3{font-weight:normal}
+p{font-size:clamp(1rem,2.2vw,1.16rem);line-height:1.85;color:#e0e7fa}
+.kicker{font:600 .72rem/1.7 system-ui,sans-serif;letter-spacing:.23em;text-transform:uppercase;color:#b4dff8}
+.subtle{color:var(--muted);font-size:.94rem}
+.shimmer{background:linear-gradient(100deg,#fff 5%,#c8eaff 36%,#d8c6ff 65%,#fff 95%);background-clip:text;-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 18px #b7dfff26)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 22px;border:1px solid #b9d9ff55;color:#f7f6ff;background:linear-gradient(135deg,#a6d9ef24,#c8baff18);box-shadow:inset 0 1px #ffffff17;transition:.3s;backdrop-filter:blur(10px)}
+.btn:hover{transform:translateY(-3px);border-color:#d7d9ffb0;box-shadow:0 10px 35px #8ebeff18}
+.btn.primary{background:linear-gradient(110deg,#c3ecff,#d9ceff 60%,#ffd7e9);color:#14182e;border:0;font-weight:bold;box-shadow:0 10px 34px #9bbdff24}
+.btn:disabled{opacity:.35;cursor:default;transform:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:clamp(20px,5vw,80px);margin-top:clamp(35px,8vh,90px)}
+.hero-copy{max-width:600px;text-align:left}
+.hero-copy p{max-width:510px}
+.orbit-scene{width:min(430px,82vw);aspect-ratio:1;position:relative;margin:auto;display:grid;place-items:center}
+.orbit{position:absolute;border:1px solid #b6dcff2d;border-radius:50%;transform:rotate(-24deg)}
+.orbit.one{inset:8%;animation:orbit 25s linear infinite}
+.orbit.two{inset:19%;transform:rotate(54deg);border-style:dashed;animation:orbit 34s linear infinite reverse}
+.orbit.three{inset:30%;border-color:#d7c7ff42}
+.orbit:before{content:"";position:absolute;top:13%;left:12%;width:7px;height:7px;background:var(--ice);border-radius:50%;box-shadow:0 0 14px var(--ice)}
+.planet{position:absolute;width:24px;height:24px;border-radius:50%;right:13%;bottom:16%;background:linear-gradient(145deg,#e8dcff,#8379bd 60%,#31375e);box-shadow:0 0 28px #a8a3ff5e}
+.glass-orb{width:45%;aspect-ratio:1;border-radius:50%;position:relative;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,#a6d8f32d,transparent 34%),linear-gradient(145deg,#b3dfff13,#b3aaff04);border:1px solid #c5eaff6b;box-shadow:0 0 0 12px #b2d7ff08,0 0 0 34px #b2d7ff05,0 0 60px #8bb9ff1c,inset 0 0 35px #a8d9ff13;backdrop-filter:blur(3px)}
+.candle-btn{border:0;background:none;width:100%;height:100%;display:grid;place-items:center;position:relative}
+.candle{position:absolute;bottom:27%;width:15px;height:86px;border-radius:5px;background:repeating-linear-gradient(135deg,#dcecff 0 8px,#8c9fd3 8px 14px);box-shadow:0 0 22px #b9dfff35}
+.candle:after{content:"";position:absolute;bottom:-5px;left:-15px;width:45px;height:8px;border-radius:50%;background:#e4caff}
+.flame{position:absolute;bottom:calc(27% + 80px);width:27px;height:41px;border-radius:60% 40% 55% 45%;background:radial-gradient(ellipse at 50% 68%,#fff 0 12%,#ffefb7 27%,#bdeaff 58%,#a7a2ff 72%,transparent 74%);filter:drop-shadow(0 0 15px #b6e6ff);animation:flicker 1s ease-in-out infinite alternate;transform-origin:bottom}
+.candle-btn.blown .flame{animation:blow .7s forwards}
+.smoke{position:absolute;bottom:calc(27% + 93px);width:7px;height:34px;border-radius:50%;opacity:0}
+.candle-btn.blown .smoke{animation:smoke 1s .2s forwards}
+.tapring{position:absolute;inset:calc(50% - 35px);border:1px solid #c2e9ff60;border-radius:50%;animation:pulse 2.4s ease-out infinite;pointer-events:none}
+.starlabel{position:absolute;bottom:4%;left:0;right:0;text-align:center;font:600 .65rem system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#9dbde5}
+.floating-note{position:absolute;top:7%;right:2%;font-size:1.1rem;color:#d4caff;animation:float 5s ease-in-out infinite}
+.section-head{text-align:center;max-width:700px;margin:0 auto 35px}
+.envelope-stage{display:grid;grid-template-columns:.8fr 1.2fr;align-items:center;gap:clamp(24px,6vw,75px);margin-top:42px}
+.envelope-art{width:min(340px,80vw);height:240px;position:relative;margin:auto;filter:drop-shadow(0 24px 25px #0007);perspective:900px}
+.env-back{position:absolute;inset:26px 0 0;background:linear-gradient(135deg,#324a76,#5c568e);border:1px solid #c2e5ff5a;border-radius:8px 8px 15px 15px}
+.env-back:before{content:"";position:absolute;inset:12px;border:1px solid #d2e7ff4b;border-radius:3px}
+.env-flap{position:absolute;top:26px;left:0;width:0;height:0;border-left:170px solid transparent;border-right:170px solid transparent;border-top:125px solid #a4cce5;transform-origin:top;transition:transform .9s;z-index:5;filter:drop-shadow(0 2px 3px #101a35)}
+.env-pocket{position:absolute;inset:26px 0 0;overflow:hidden;border-radius:8px 8px 15px 15px;z-index:3}
+.env-pocket:before,.env-pocket:after{content:"";position:absolute;bottom:0;width:0;height:0;border-style:solid}
+.env-pocket:before{left:0;border-width:170px 170px 0 0;border-color:transparent #6c659b transparent transparent}
+.env-pocket:after{right:0;border-width:170px 0 0 170px;border-color:transparent transparent transparent #4d5e8c}
+.seal{position:absolute;z-index:6;top:105px;left:calc(50% - 23px);width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#17213c;background:radial-gradient(circle at 30% 25%,#fff,#c9e7ff 40%,#b5a8e8);box-shadow:0 0 25px #bceaff50;font-size:1.4rem}
+.envelope-art.open .env-flap{transform:rotateX(180deg);z-index:1}
+.envelope-art.open .seal{opacity:0;transition:opacity .2s}
+.envelope-copy{text-align:left}
+.feature-line{display:flex;align-items:center;gap:12px;color:#c7d8f3;font: .8rem system-ui,sans-serif;letter-spacing:.08em;margin-top:25px}
+.feature-line:before{content:"";height:1px;width:38px;background:#b5dfff77}
+.glass-panel{border:1px solid #b7dfff2c;background:linear-gradient(140deg,#142344bb,#11152eb0);border-radius:26px;padding:clamp(22px,4vw,42px);box-shadow:0 25px 80px #0004,inset 0 1px #fff1;backdrop-filter:blur(14px)}
+.greeting-layout{display:grid;grid-template-columns:.65fr 1.35fr;gap:30px;align-items:center}
+.greeting-mark{min-height:270px;display:grid;place-items:center;position:relative}
+.greeting-mark .ring{position:absolute;width:220px;height:220px;border:1px solid #b7dfff4c;border-radius:50%;box-shadow:0 0 0 18px #b7dfff08,0 0 0 40px #b7dfff05}
+.greeting-mark .big-star{font-size:5rem;color:#c8eaff;text-shadow:0 0 35px #a6dfff;z-index:1;animation:float 4s ease-in-out infinite}
+.greeting-copy p{max-width:620px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0}
+.memory{position:relative;min-height:190px;border:1px solid #c5dcff38;border-radius:20px;padding:22px 17px;background:linear-gradient(150deg,#ffffff0c,#ffffff03);color:var(--ink);text-align:left;overflow:hidden;transition:transform .3s,border .3s}
+.memory:hover{transform:translateY(-5px);border-color:#cdeaff85}
+.memory .num{font:600 .68rem system-ui,sans-serif;letter-spacing:.18em;color:#91c8ed}
+.memory .symbol{font-size:1.65rem;display:block;margin:18px 0 12px;color:#d9d0ff}
+.memory strong{font-weight:normal;font-size:1.1rem}
+.memory .hint{display:block;color:#aab8d9;font: .75rem system-ui,sans-serif;margin-top:10px}
+.memory .message{display:none;font-size:.9rem;line-height:1.7;color:#e3e8fa;margin-top:14px}
+.memory.open{background:linear-gradient(150deg,#263b5dbb,#34284d99);min-height:250px}
+.memory.open .message{display:block}.memory.open .hint{display:none}
+.letter-shell{width:min(750px,100%);margin:28px auto 20px;perspective:1800px}
+.letter{min-height:400px;position:relative;text-align:left;padding:clamp(25px,6vw,58px);background:linear-gradient(135deg,#f4f5ff,#dce8fb 75%,#d5d5f4);color:#1b2541;border-radius:4px 22px 22px 4px;box-shadow:0 25px 60px #0007;border-left:9px solid #9aa9d8;transform-origin:left center}
+.letter.turn{animation:turnPage .58s ease both}
+.letter .folio{font:600 .67rem system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#6679a4;margin-bottom:28px}
+.letter p{color:#27314d;line-height:1.83;font-size:clamp(.96rem,2vw,1.08rem)}
+.letter p:last-child{margin-bottom:0}
+.letter:after{content:"";position:absolute;bottom:18px;left:25px;right:25px;height:1px;background:#8193bb38}
+.letter-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;width:min(750px,100%);margin:auto}
+.page-indicator{font: .8rem system-ui,sans-serif;color:#b8c6e8;letter-spacing:.08em}
+.final-layout{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:40px}
+.constellation{width:min(390px,80vw);aspect-ratio:1;position:relative;margin:auto}
+.constellation svg{width:100%;height:100%;overflow:visible}
+.constellation path{stroke:#b7dfff8c;stroke-width:1.4;fill:none;stroke-dasharray:5 7;animation:dash 18s linear infinite}
+.constellation circle{fill:#d9f3ff;filter:drop-shadow(0 0 7px #9ddcff)}
+.constellation .heartstar{fill:#e8d8ff}
+.final-copy{text-align:left}
+.final-copy .closing{font-size:clamp(2rem,5vw,3.6rem);line-height:1.05}
+footer{margin-top:25px;font: .74rem/1.8 system-ui,sans-serif;letter-spacing:.08em;color:#9eadd2}
+.confetti{position:fixed;top:-15px;width:7px;height:13px;z-index:50;pointer-events:none;animation:fall linear forwards}
+@keyframes screenIn{from{opacity:0;filter:blur(5px);transform:translateY(14px) scale(.99)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes flicker{from{transform:rotate(-5deg) scale(.94)}to{transform:rotate(5deg) scale(1.06)}}
+@keyframes blow{0%{opacity:1}40%{opacity:.7;transform:translate(30px,-8px) scale(.7)}100%{opacity:0;transform:translate(65px,-35px) scale(.05)}}
+@keyframes smoke{0%{opacity:0;transform:translateY(0) scale(.5)}30%{opacity:.4}100%{opacity:0;transform:translateY(-45px) translateX(10px) scale(2);background:#c9eaff}}
+@keyframes pulse{0%{transform:scale(.75);opacity:0}25%{opacity:.7}100%{transform:scale(1.8);opacity:0}}
+@keyframes orbit{to{transform:rotate(336deg)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes turnPage{0%{transform:rotateY(0);opacity:1}48%{transform:rotateY(-18deg);opacity:.45}100%{transform:rotateY(0);opacity:1}}
+@keyframes dash{to{stroke-dashoffset:-160}}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(740deg);opacity:.85}}
+@media(max-width:760px){.hero-grid,.envelope-stage,.greeting-layout,.final-layout{grid-template-columns:1fr}.hero-copy{text-align:center;margin:auto}.hero-copy p{margin-left:auto;margin-right:auto}.hero-grid{margin-top:30px}.orbit-scene{width:min(340px,78vw);order:-1}.envelope-copy,.final-copy{text-align:center}.greeting-mark{min-height:200px}.greeting-mark .ring{width:160px;height:160px}.greeting-mark .big-star{font-size:4rem}.cards{grid-template-columns:1fr}.memory{min-height:130px}.memory.open{min-height:200px}.letter{min-height:450px}.topline{font-size:.6rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<section id="candleScreen" class="screen active">
+ <div class="wrap">
+  <div class="date-stamp">December 4, 2026</div>
+  <div class="topline"><span class="brandmark"><i></i> THE CELESTIAL ARCHIVE</span><span class="stepcount">01 / 05</span></div>
+  <div class="hero-grid">
+   <div class="hero-copy">
+    <div class="kicker">✦ A little surprise made just for you</div>
+    <h1 class="shimmer">Dearest<br>Koko Ahmed</h1>
+    <p>Some people are too special for an ordinary birthday wish. So, here's a little world made especially for you. ♡</p>
+    <p class="subtle">A small light. A quiet wish. A whole universe waiting to unfold.</p>
+    <button class="btn primary" id="makeWish">Touch the flame ✧</button>
+   </div>
+   <div class="orbit-scene" aria-label="A candle floating inside a celestial orb">
+    <div class="orbit one"></div><div class="orbit two"></div><div class="orbit three"></div><div class="planet"></div><div class="floating-note">✧</div>
+    <div class="glass-orb"><button class="candle-btn" id="candleButton" aria-label="Tap the candle flame"><span class="tapring"></span><span class="flame"></span><span class="smoke"></span><span class="candle"></span></button></div>
+    <div class="starlabel">Make a wish • tap the flame</div>
+   </div>
+  </div>
+  <footer>✦　Made with love ♡</footer>
+ </div>
+</section>
+
+<section id="envelopeScreen" class="screen">
+ <div class="wrap">
+  <div class="topline"><span class="brandmark"><i></i> THE CELESTIAL ARCHIVE</span><span class="stepcount">02 / 05</span></div>
+  <div class="envelope-stage">
+   <div class="envelope-art" id="envelopeArt" aria-hidden="true"><div class="env-back"></div><div class="env-flap"></div><div class="env-pocket"></div><div class="seal">✦</div></div>
+   <div class="envelope-copy">
+    <div class="kicker">A day just for you (December 4th 2026)</div><h2 class="shimmer">A message,<br>kept among the stars.</h2>
+    <p>Some surprises are better opened slowly. ♡</p>
+    <p class="subtle">A little note is waiting on the other side.</p>
+    <button class="btn primary" id="openEnvelope">Open your surprise ♡</button>
+    <div class="feature-line">SEALED WITH A LITTLE STARDUST</div>
+   </div>
+  </div>
+  <footer>✧ ✧ ✧</footer>
+ </div>
+</section>
+
+<section id="surpriseScreen" class="screen">
+ <div class="wrap">
+  <div class="topline"><span class="brandmark"><i></i> THE CELESTIAL ARCHIVE</span><span class="stepcount">03 / 05</span></div>
+  <div class="glass-panel" style="margin-top:38px">
+   <div class="greeting-layout">
+    <div class="greeting-mark"><div class="ring"></div><div class="big-star">✧</div></div>
+    <div class="greeting-copy"><div class="kicker">A day just for you</div><h2 class="shimmer">Happy Birthday!<br><span style="font-size:.58em">Dearest Koko Ahmed ♡</span></h2>
+     <p>Today is your special day. May Allah fill your year with happiness, peace, and countless blessings. Ameen. ♡</p>
+     <p>Today is a little reminder that someone in this world is wishing you beautiful things with all her heart.</p>
+    </div>
+   </div>
+   <div style="text-align:center;margin-top:28px"><div class="kicker">Five little things for you</div><h2 style="font-size:clamp(1.7rem,4vw,2.6rem);margin:12px 0">Open your little surprises ♡</h2><p class="subtle">Tap each card to discover its message.</p></div>
+   <div class="cards">
+    <button class="memory" aria-expanded="false"><span class="num">MEMORY 01</span><span class="symbol">✧</span><strong>A reminder</strong><span class="hint">Tap to reveal</span><span class="message">Never forget that your life matters, your dreams matter, and you deserve kindness even on the days that feel difficult. Please take good care of yourself. 💌</span></button>
+    <button class="memory" aria-expanded="false"><span class="num">MEMORY 02</span><span class="symbol">♡</span><strong>A few words</strong><span class="hint">Tap to reveal</span><span class="message">You are someone I appreciate deeply. I hope you keep growing, smiling, learning, and becoming the person you dream of being. I am genuinely wishing the best for you. 🤲🏻</span></button>
+    <button class="memory" aria-expanded="false"><span class="num">MEMORY 03</span><span class="symbol">☾</span><strong>A little dua</strong><span class="hint">Tap to reveal</span><span class="message">May Allah protect you, guide you towards what is good, grant you peace of heart, bless your health and future, fulfil your sincere duas, and make your difficult days easier. Ameen.</span></button>
+    <button class="memory" aria-expanded="false"><span class="num">MEMORY 04</span><span class="symbol">♡</span><strong>My everything</strong><span class="hint">Tap to reveal</span><span class="message">Koko, you mean more to me than you probably realize. You have a place in my heart that no words could ever fully describe. Baby, I love you so, so much—more than I could ever fit into a message. You are my everything, my happiness, and my comfort, and I feel so grateful that you are part of my life. Even when we’re apart, my heart still holds you close, and every memory with you means the world to me. I wish I could remind you every day how deeply you are loved. 💗</span></button>
+    <button class="memory" aria-expanded="false"><span class="num">MEMORY 05</span><span class="symbol">☾</span><strong>The memories I miss</strong><span class="hint">Tap to reveal</span><span class="message">Sometimes, I find myself missing the smallest things the most. The moments we shared, the fun we had, the memories I wish I could relive, and the happiness I felt without realizing how precious those moments were. If only time could take me back for a little while, I would cherish every second even more. Those memories will always mean something special to me. ♡</span></button>
+   </div>
+   <div style="text-align:center"><button class="btn primary" id="toLetter">Read my letter ♡　→</button></div>
+  </div>
+  <footer>✦　♡　✦</footer>
+ </div>
+</section>
+
+<section id="letterScreen" class="screen">
+ <div class="wrap">
+  <div class="topline"><span class="brandmark"><i></i> THE CELESTIAL ARCHIVE</span><span class="stepcount">04 / 05</span></div>
+  <div class="section-head" style="margin-top:44px"><div class="kicker">Something from my heart</div><h2 class="shimmer">A letter for you ♡</h2><p>Some feelings deserve more than a few words. This little letter is one of them.</p></div>
+  <div class="letter-shell"><article class="letter" id="letterPage" aria-live="polite"></article></div>
+  <div class="letter-controls"><button class="btn" id="prevPage">← Previous</button><span class="page-indicator" id="pageNumber">PAGE 01 / 03</span><button class="btn primary" id="nextPage">Turn the page →</button></div>
+  <footer style="text-align:center">✦　♡　✦</footer>
+ </div>
+</section>
+
+<section id="endingScreen" class="screen">
+ <div class="wrap">
+  <div class="topline"><span class="brandmark"><i></i> THE CELESTIAL ARCHIVE</span><span class="stepcount">05 / 05</span></div>
+  <div class="final-layout" style="margin-top:40px">
+   <div class="constellation" aria-hidden="true"><svg viewBox="0 0 400 400"><path d="M58 102 L119 69 L171 126 L235 79 L287 147 L344 119 L309 211 L246 246 L275 317 L190 293 L132 333 L108 250 L48 218 L90 163 Z"/><path d="M119 69 L108 250 L190 293 L246 246 L287 147 L171 126 L132 333"/><circle cx="58" cy="102" r="4"/><circle cx="119" cy="69" r="5"/><circle cx="171" cy="126" r="4"/><circle cx="235" cy="79" r="4"/><circle cx="287" cy="147" r="5"/><circle cx="344" cy="119" r="4"/><circle cx="309" cy="211" r="4"/><circle cx="246" cy="246" r="5"/><circle cx="275" cy="317" r="4"/><circle cx="190" cy="293" r="4"/><circle cx="132" cy="333" r="4"/><circle cx="108" cy="250" r="4"/><circle cx="48" cy="218" r="4"/><circle cx="90" cy="163" r="4"/><path class="heartstar" d="M194 155 C177 139 157 161 194 189 C231 161 211 139 194 155 Z"/></svg></div>
+   <div class="final-copy"><div class="kicker">05 / A wish to keep</div><div class="end-heart" style="font-size:2rem;color:#d9d0ff;margin:18px 0">✧</div><h2 class="closing shimmer">One last wish<br>for you ♡</h2>
+    <p>May this new chapter of your life bring you endless happiness, beautiful memories, and countless reasons to smile. May Allah protect you wherever life takes you, guide every step you take, and grant you the things your heart quietly wishes for. Ameen.</p>
+    <p>Happy Birthday again, Dearest Koko Ahmed. May your days always be filled with peace, warmth, and blessings.</p>
+    <p>Love you so, so much, baby. Always remember that you are loved more than words can explain. ♡</p>
+    <h2 style="font-size:clamp(1.7rem,4vw,2.6rem);margin-top:28px">To the moon and back ♡</h2>
+    <p class="subtle">Made with love by Fathimah ♡<br>For someone very special.<br>♡</p>
+    <button class="btn" id="replay">Return to the beginning ↺</button>
+   </div>
+  </div>
+  <footer style="text-align:center">✦　♡　✦</footer>
+ </div>
+</section>
+<script>
+const screens=[...document.querySelectorAll('.screen')];
+function showScreen(id){screens.forEach(s=>s.classList.toggle('active',s.id===id));window.scrollTo({top:0,behavior:'smooth'});}
+const candle=document.getElementById('candleButton'), wish=document.getElementById('makeWish');
+let blown=false;
+function blowCandle(){if(blown)return;blown=true;candle.classList.add('blown');wish.disabled=true;wish.textContent='Your wish is among the stars ✧';setTimeout(()=>showScreen('envelopeScreen'),1350);}
+candle.addEventListener('click',blowCandle);wish.addEventListener('click',blowCandle);
+document.getElementById('openEnvelope').addEventListener('click',()=>{document.getElementById('envelopeArt').classList.add('open');setTimeout(()=>showScreen('surpriseScreen'),650);});
+document.querySelectorAll('.memory').forEach(card=>card.addEventListener('click',()=>{const opened=card.classList.toggle('open');card.setAttribute('aria-expanded',String(opened));}));
+document.getElementById('toLetter').addEventListener('click',()=>{pageIndex=0;renderPage();showScreen('letterScreen');});
+const pages=[
+ {label:'A LETTER FROM MY HEART · 01',paragraphs:[
+  'My dearest Koko Ahmed, my baby, ♡',
+  "You are so much more than just someone special to me. You are my everything, my happiness, my comfort, and one of the most precious parts of my life. Sometimes, I wonder how I got so lucky to have someone like you in my life. No words could ever fully explain how grateful I am for you and for the happiness you've brought into my world. Koko, I love you so much, baby—more than these little words could ever show.",
+  'I miss you more than I could ever explain, baby. I miss our moments, our little conversations, the memories we made, and even the smallest things that might have seemed ordinary at the time, Koko. I never knew those little moments would become such precious memories that I would wish to experience again and again.'
+ ]},
+ {label:'A LETTER FROM MY HEART · 02',paragraphs:[
+  'And do you remember that one game we played together? It might have seemed boring, and perhaps it wasn’t anything extraordinary, but somehow, playing it with you made it different. We had fun together, and that little moment became one of the most unforgettable memories for me. It’s funny how something so simple can mean so much when it’s connected to someone you love.',
+  'If I could revisit even one of those moments, I would do it in a heartbeat. Not because everything was perfect, but because those moments were ours, and I miss them more than words can say. I wish I could tell you face to face, baby, just how much I love you and how precious you are to me. ♡',
+  'If there’s one thing I wish you could truly understand, it’s how much you mean to me. You are my everything, and having you in my life is something I will always be grateful for. I love you in ways that are sometimes difficult to put into words. It’s not only about the happy moments or the beautiful memories; it’s about how deeply you have become a part of my heart. Koko, you’re so precious to me, baby, and I love you with all my heart.'
+ ]},
+ {label:'A LETTER FROM MY HEART · 03',paragraphs:[
+  'And honestly, baby, I miss you. I miss you so much that sometimes even the smallest memories can make my heart ache. I miss the moments we shared, the little things we did, and all those memories that I wish I could experience one more time. Sometimes, I wish I could return to those days, even just for a few minutes, simply to feel that happiness again.',
+  'That game we played together will always be one of my most unforgettable memories. Maybe it was an ordinary, boring game to someone else, but to me, it was special because I played it with you. We had fun, and that’s what made it memorable. It reminds me that happiness doesn’t always come from doing something extraordinary. Sometimes, it’s simply about sharing an ordinary moment with someone who means the world to you.',
+  'Thank you for being someone so precious in my life. Thank you for the memories, the happiness, and the feelings that have made my world a little more meaningful. If I could keep one thing forever, it would be the beautiful memories we’ve made together.'
+ ]},
+ {label:'A LETTER FROM MY HEART · 04',paragraphs:[
+  'No matter how much I miss you, I will always be grateful that our paths crossed. And if I ever get the chance to make more beautiful memories with you, I hope I will cherish every little moment even more than before.',
+  'Koko, you are, and always will be, someone incredibly special to my heart. I love you so much, baby—more than words, more than this letter, and more than I could ever fully explain. ♡',
+  'With all my love,',
+  'Fathimah ♡'
+ ]}
+];
+let pageIndex=0;
+function esc(s){return s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#039;");}
+function renderPage(){const p=pages[pageIndex],el=document.getElementById('letterPage');el.classList.remove('turn');void el.offsetWidth;el.classList.add('turn');el.innerHTML='<div class="folio">'+p.label+'</div>'+p.paragraphs.map(t=>'<p>'+esc(t)+'</p>').join('');document.getElementById('pageNumber').textContent='PAGE 0'+(pageIndex+1)+' / 0'+pages.length;document.getElementById('prevPage').disabled=pageIndex===0;document.getElementById('nextPage').textContent=pageIndex===pages.length-1?'Reveal the final wish ✧':'Turn the page →';}
+document.getElementById('prevPage').addEventListener('click',()=>{if(pageIndex>0){pageIndex--;renderPage();}});
+document.getElementById('nextPage').addEventListener('click',()=>{if(pageIndex<pages.length-1){pageIndex++;renderPage();}else{showScreen('endingScreen');confetti();}});
+function confetti(){const colors=['#bceaff','#c9b8ff','#ffd0e8','#ffe8b2','#ffffff'];for(let i=0;i<120;i++){const e=document.createElement('i');e.className='confetti';e.style.left=Math.random()*100+'vw';e.style.background=colors[Math.floor(Math.random()*colors.length)];e.style.borderRadius=Math.random()>.5?'50%':'2px';e.style.setProperty('--drift',((Math.random()-.5)*240)+'px');e.style.animationDuration=(3+Math.random()*4)+'s';e.style.animationDelay=(Math.random()*.7)+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),8000);}}
+document.getElementById('replay').addEventListener('click',()=>{blown=false;candle.classList.remove('blown');wish.disabled=false;wish.textContent='Touch the flame ✧';document.getElementById('envelopeArt').classList.remove('open');document.querySelectorAll('.memory').forEach(c=>{c.classList.remove('open');c.setAttribute('aria-expanded','false');});pageIndex=0;renderPage();showScreen('candleScreen');});
+renderPage();
+</script>
+</body>
+</html>
